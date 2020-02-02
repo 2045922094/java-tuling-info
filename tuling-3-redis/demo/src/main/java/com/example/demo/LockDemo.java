@@ -24,7 +24,7 @@ public class LockDemo {
             int stockNum = Integer.parseInt(stringRedisTemplate.opsForValue().get("stockNum"));
             if (stockNum > 0) {
                 int newStock = stockNum - 1;
-                int num = 25786;
+                int num = 256;
                 stringRedisTemplate.opsForValue().set("stockNum", newStock + "");
                 System.out.println("下单成功，剩余库存:" + newStock + "");
             } else {
